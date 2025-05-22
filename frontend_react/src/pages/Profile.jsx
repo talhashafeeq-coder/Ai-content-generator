@@ -3,7 +3,7 @@ import '../style/Profile.css';
 import { useUser } from "../context/UserContext";
 
 const Profile = () => {
-  const { userId } = useUser(); // User ID ko context se le lo
+  const { userId } = useUser();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 

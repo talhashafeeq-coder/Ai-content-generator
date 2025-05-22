@@ -1,5 +1,4 @@
 import MainApi from "../pages/main-api";
-// import PromptChart from './prompt-chat';
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Sidebar from "../pages/Sidebar";
@@ -9,13 +8,12 @@ import Navbar from "../components/navbar";
 
 const IndexUrl =  {
     MainApi,
-    // PromptChart,
     Register,
     Login,
     Sidebar,
     Blogwith_history,
     Profile,
-    Navbar,
+    Navbar
 }
 export default IndexUrl;    
 
