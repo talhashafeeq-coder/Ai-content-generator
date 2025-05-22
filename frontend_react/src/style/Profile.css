@@ -1,0 +1,32 @@
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  /* transition: transform 0.3s ease; */
+}
+
+
+.profile-box p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.profile-box strong {
+  color: #222;
+}

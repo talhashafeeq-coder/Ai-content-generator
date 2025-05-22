@@ -1,0 +1,70 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0f2027;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+/* Hero Section */
+.app-hero {
+  background-image: url('https://images.unsplash.com/photo-1526378722440-91ea9c207f6e?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.app-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #89b3ff;
+}
+
+.app-subtext {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Main Section */
+.app-main-content {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); */
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-heading {
+    font-size: 2rem;
+  }
+
+  .app-subtext {
+    font-size: 1rem;
+  }
+
+  .app-hero {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,108 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e20;
+  color: #ffffff;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto; /* agar entries zyada ho to scroll ho jaye */
+  display: flex;
+  background: #000;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* History entries list container */
+.sidebar .history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* take available vertical space */
+}
+
+/* Individual history entry item */
+.sidebar .history-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Icon inside each history item */
+.sidebar .history-list li .icon {
+  margin-right: 10px;  /* icon aur text ke beech gap */
+  font-size: 1.2rem;
+  min-width: 24px; /* icon ke liye fixed space */
+}
+
+/* Text inside history item */
+.sidebar .history-list li .text {
+  flex-grow: 1;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Hover effect */
+.sidebar .history-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* When sidebar is closed (removed from DOM), so no bgcolor needed */
+
+/* Full-width main content when sidebar is closed */
+.full-width {
+  width: 100%;
+}
+
+/* Main content styling */
+.main-content {
+  background-color: #0d0d0e;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Always-visible toggle button */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  font-size: 22px;
+  transition: background-color 0.3s ease;
+}
+
+/* Icon styling */
+.icon {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Simple icon animation on toggle */
+.animated-icon {
+  animation: rotateIcon 0.4s ease forwards;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
