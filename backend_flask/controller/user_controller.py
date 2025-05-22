@@ -7,7 +7,7 @@ from datetime import timedelta
 
 user_bp = Blueprint('user', __name__)
 
-# 🔸 CREATE User
+# 📌 Route  CREATE User Sign-in
 @user_bp.route('/v1/users', methods=['POST'])
 def create_user():
     data = request.json
@@ -24,21 +24,21 @@ def create_user():
     db.session.commit()
     return jsonify({"message": "User created successfully", "user": user.serialize()}), 201
 
-# 🔹 READ All Users
+# 📌 Route  READ All Users
 @user_bp.route('/v1/get-users', methods=['GET'])
 def get_all_users():
     users = UserTable.query.all()
     return jsonify([user.serialize() for user in users])
 
-# 🔍 READ One User by ID
-@user_bp.route('/<int:user_id>', methods=['GET'])
+# 📌 Route  READ One User by ID
+@user_bp.route('/v1/get-one-user/<int:user_id>', methods=['GET'])
 def get_user(user_id):
     user = UserTable.query.get(user_id)
     if user:
         return jsonify(user.serialize())
     return jsonify({"error": "User not found"}), 404
 
-# ✏️ UPDATE User
+# 📌 Route  UPDATE User
 @user_bp.route('/v1/update-user/<int:user_id>', methods=['PUT'])
 def update_user(user_id):
     user = UserTable.query.get(user_id)
@@ -56,7 +56,7 @@ def update_user(user_id):
     db.session.commit()
     return jsonify({"message": "User updated successfully", "user": user.serialize()})
 
-# ❌ DELETE User
+# 📌 Route  DELETE User
 @user_bp.route('/v1/delete-user/<int:user_id>', methods=['DELETE'])
 def delete_user(user_id):
     user = UserTable.query.get(user_id)
@@ -67,10 +67,7 @@ def delete_user(user_id):
     db.session.commit()
     return jsonify({"message": "User deleted successfully"})
 
-# 🔑 User Login
-
-
-
+# 📌 Route  User Login
 @user_bp.route('/v1/login', methods=['POST'])
 def login():
     data = request.json
@@ -91,7 +88,7 @@ def login():
 
     return jsonify({"error": "Invalid username or password"}), 401
 
-# 🔑Get userlogin
+# 📌 Route Get userlogin
 @user_bp.route('/v1/user/<int:user_id>', methods=['GET'])
 def get_user_profile(user_id):
     user = UserTable.query.get(user_id)
@@ -101,7 +98,7 @@ def get_user_profile(user_id):
 
     return jsonify({"user": user.serialize()}), 200
 
-# logout route
+
 
 
     

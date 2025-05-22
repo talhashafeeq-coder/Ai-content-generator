@@ -2,7 +2,8 @@
 backend_flask/venv/
 backend_flask/__pycache__/
 backend_flask/.env
-
+backend_flask/.pytest_cache/
+backend_flask/.mypy_cache/
 # Node
 frontend_react/node_modules/
 frontend_react/.env

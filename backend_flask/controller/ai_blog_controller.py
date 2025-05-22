@@ -1,8 +1,3 @@
-
-
-
-
-# ai_blog.py
 from flask import Blueprint, request, jsonify
 import os
 import requests
@@ -16,8 +11,7 @@ if not OPENROUTER_API_KEY:
   # good practice
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-ai_blog_bp = Blueprint('ai_blog', __name__)  # renamed to ai_blog_bp for clarity
-
+ai_blog_bp = Blueprint('ai_blog', __name__)  
 @ai_blog_bp.route("/api/chat", methods=["POST"])
 def chat():
     data = request.json
